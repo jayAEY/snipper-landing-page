@@ -237,7 +237,7 @@
             margin-right: 20px;
         }
 
-        @media screen and (min-width: 500px) {
+        @media screen and (min-width: 600px) {
             #menu-links {
                 display: flex;
             }
@@ -331,11 +331,11 @@
         }
 
         function resize() {
-            if (window.innerWidth > 500) {
+            if (window.innerWidth > 600) {
                 menuLinks.style.display = "flex"
                 menuLinks.classList.remove("mobile-menu")
             }
-            if (window.innerWidth < 500) {
+            if (window.innerWidth < 600) {
                 menuLinks.style.display = "none"
             }
         }
