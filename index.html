@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snipper Landing Page</title>
+</head>
+<body>
+    <main>
+        <section id="section-a">
+            <header>
+                <a href="a"> <img id="logo" src="Assets/Logo.svg" alt="Snipper logo"> </a>
+                <div id="menu-links" style="display: none;">
+                    <svg id="close-icon" width="40" height="40" viewBox="5 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" />
+                    </svg>
+                    <img id="search-icon" src="Assets/Search Icon.svg" alt="Search icon">
+                    <a href="#">Sign In</a>
+                    <button class="get-started">Get started <span>- it's free</span></button>
+                </div>
+                <img id="menu-icon" src="Assets/Hamburger Menu.svg">
+            </header>
+            <h1> Gorgeous Code Snippets </h1>
+            <p>With Snipper, create fully customizable code snippets in a matter of seconds right from your browser.</p>
+            <button class="get-started">Get started <span>- it's free</span></button>
+            <p>No credit card required</p>
+            <img id="snippet-image" src="Assets/Snippet Image.png">
+        </section>
+        <section id="section-b">
+            <img id="customizable-image" src="Assets/Customizable Image.png">
+            <div>
+                <h2> A fully customizable code snippet editor</h2>
+                <p>Fully customize the color scheme of your code snippet, or use our own premade color schemes. Export
+                    your code snippets in JPG, PDF, PNG, or any other 10+ common extensions</p>
+                <button class="get-started">Get started <span>- it's free</span></button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="a"> <img id="logo" src="Assets/Logo.svg" alt="Snipper logo"> </a>
+        <div>
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </footer>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.8rem;
+            width: 100vw;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin: 0 10px;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+        }
+
+        a {
+            font-size: 0.65rem;
+            text-decoration: none;
+            color: #494949;
+            transition: all 0.5s;
+        }
+
+        a:visited {
+            color: #494949
+        }
+
+        a:hover {
+            color: #a2394b;
+            font-weight: 500;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        #logo {
+            width: 75px;
+        }
+
+        #menu-links {
+            display: none;
+            align-items: center;
+        }
+
+        #close-icon {
+            display: none;
+        }
+
+        .mobile-menu {
+            right: 10px;
+            position: absolute;
+            min-width: 220px;
+            height: 50px;
+            flex-direction: row;
+            padding: 3%;
+            background-color: white;
+            justify-content: space-between;
+            border-radius: 4px;
+            z-index: 999;
+        }
+
+        .mobile-menu a {
+            width: 60px;
+        }
+
+        .mobile-menu button {
+            width: 90%;
+        }
+
+        .mobile-menu #close-icon {
+            display: block;
+        }
+
+        #menu-icon {
+            width: 16px;
+            cursor: pointer;
+            transition: all 1s;
+        }
+
+        #search-icon:hover,
+        #close-icon:hover,
+        #menu-icon:hover {
+            transform: scale(1.1);
+            opacity: 0.4;
+            cursor: pointer;
+        }
+
+        #search-icon {
+            width: 18px;
+            margin-right: 10px;
+        }
+
+        #menu-links a {
+            margin-right: 10px;
+        }
+
+        .get-started {
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            height: 35px;
+            width: 100%;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .get-started:hover {
+            transform: scale(1.05);
+            color: #a2394b;
+        }
+
+        .get-started span {
+            color: gray;
+            font-weight: 500;
+        }
+
+        #section-a {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            padding: 0px 20px;
+            height: auto;
+            background-image: url("Assets/Background.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        #snippet-image {
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        #section-b {
+            display: flex;
+            flex-direction: column;
+            padding: 50px 20px;
+            height: auto;
+            align-items: center;
+
+        }
+
+        #customizable-image {
+            width: 90%;
+            margin-bottom: 35px;
+        }
+
+        #section-b .get-started {
+            align-self: flex-start;
+            width: 150px;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            padding: 0 20px;
+        }
+
+        footer div {
+            display: flex;
+            align-content: flex-start;
+            padding-top: 15px;
+            padding-bottom: 30px;
+        }
+
+        footer div a:first-child {
+            margin-right: 20px;
+        }
+
+        @media screen and (min-width: 500px) {
+            #menu-links {
+                display: flex;
+            }
+
+            #menu-icon {
+                display: none;
+            }
+
+            h1 {
+                margin: 0 20px;
+            }
+
+            .get-started {
+                width: 150px;
+            }
+
+            #snippet-image {
+                margin-top: 60px;
+            }
+
+            #customizable-image {
+                width: 50%;
+            }
+
+            footer {
+                flex-direction: row;
+                justify-content: space-between;
+                padding-bottom: 30px;
+            }
+
+            footer div {
+                padding: 0;
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+            header {
+                padding: 20px 0;
+            }
+
+            #section-a {
+                padding: 0 7%;
+            }
+
+            #section-a p {
+                max-width: 500px;
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+
+            #section-a p:nth-child(5) {
+                margin-top: 8px;
+                margin-bottom: 8px;
+            }
+
+            #snippet-image {
+                margin-top: 20px;
+                width: 100%;
+                max-width: 800px;
+            }
+
+            #section-b {
+                flex-direction: row-reverse;
+                padding: 50px 7%;
+            }
+
+            #customizable-image {
+                width: 100%;
+                max-width: 600px;
+            }
+
+            footer {
+                padding: 30px 7%;
+            }
+        }
+    </style>
+    <script>
+        const menuIcon = document.querySelector("#menu-icon")
+        const closeIcon = document.querySelector("#close-icon")
+        const menuLinks = document.querySelector("#menu-links")
+
+        function toggleMenu() {
+            console.log(menuLinks.style.display)
+            if (menuLinks.style.display == "" || menuLinks.style.display != "none") {
+                menuLinks.style.display = "none"
+                menuLinks.classList.remove("mobile-menu")
+            } else if (menuLinks.style.display == "none") {
+                menuLinks.style.display = "flex"
+                menuLinks.classList.add("mobile-menu")
+            }
+
+
+        }
+
+        function resize() {
+            if (window.innerWidth > 500) {
+                menuLinks.style.display = "flex"
+                menuLinks.classList.remove("mobile-menu")
+            }
+            if (window.innerWidth < 500) {
+                menuLinks.style.display = "none"
+            }
+        }
+
+        menuIcon.addEventListener('click', toggleMenu)
+        closeIcon.addEventListener('click', toggleMenu)
+        window.addEventListener('resize', resize)
+    </script>
+</body>
+
+</html>
